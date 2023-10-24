@@ -1,0 +1,1 @@
+@vechainfoundation/node-hosting-code-owners
