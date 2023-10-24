@@ -1,10 +1,10 @@
-# CONTRIBUTING to [Your Project Name]
+# Contributing to Node Healthcheck
 
-First of all, thank you for considering to contribute to [Your Project Name]! Your help is invaluable to improve the project and make it more useful for the community. This document will guide you through the contribution process and make it easier for you to get started.
+First of all, thank you for considering to contribute to Node Healthcheck! Your help is invaluable to improve the project and make it more useful for the community. This document will guide you through the contribution process and make it easier for you to get started.
 
 ## Table of Contents
 
-- [CONTRIBUTING to \[Your Project Name\]](#contributing-to-your-project-name)
+- [Contributing to Node Healthcheck](#contributing-to-node-healthcheck)
   - [Table of Contents](#table-of-contents)
   - [Code of Conduct](#code-of-conduct)
   - [Getting Started](#getting-started)
@@ -25,7 +25,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 2. Clone your fork to your local machine.
 3. Create a new branch for your feature or bugfix.
    1. Use `git checkout -b feature/your-feature-name` for features.
-   2. Use `git checkout -b bugfix/your-bugfix-name`) for bugfixes.
+   2. Use `git checkout -b bugfix/your-bugfix-name` for bugfixes.
 4. Make your changes and commit them to your new branch.
 5. Push your changes to your fork.
 6. Open a pull request against the main branch of the original repository.
@@ -77,6 +77,6 @@ If the project uses a specific code formatter or linter, please ensure your cont
 - [GitHub Help: Creating a pull request from a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
 - [Git Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
-Once again, thank you for your interest in contributing to [Your Project Name]! Your support and collaboration are crucial to the success and growth of this project. If you have any questions or need additional guidance, please don't hesitate to reach out to the maintainers.
+Once again, thank you for your interest in contributing to Node Healthcheck! Your support and collaboration are crucial to the success and growth of this project. If you have any questions or need additional guidance, please don't hesitate to reach out to the maintainers.
 
 Happy coding!
