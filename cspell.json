@@ -1,0 +1,15 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "BUILDKIT",
+        "buildx",
+        "gitleaks",
+        "healtchcheck",
+        "vechainfoundation"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
