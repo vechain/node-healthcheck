@@ -1,6 +1,6 @@
 # Node Healthcheck
 
-![Node Hosting Project Logo](node-hosting.png)
+![Node Hosting Project Logo](images/node-hosting.png)
 
 ## Introduction
 
@@ -16,7 +16,9 @@ The API contains two endpoints:
 
 - /metrics
 
-  used by Prometheus to collect metrics about last block timestamp, number of seconds since last block and node healtchcheck status.
+  used by Prometheus to collect health metrics, such as the last block timestamp, number of seconds since last block and node health status.
+
+![Node Hosting Design Diagram - Healthcheck](images/architecture-diagram-healthcheck.webp)
 
 Consider turning on branch protection for `main` as follows:
 1. Require a pull request before merging.
