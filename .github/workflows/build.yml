@@ -38,10 +38,17 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16.20.2'
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run docker:build
+      - name: Build docker image
+        run: |
+          export DOCKER_BUILDKIT=1
+          docker buildx create --use
+          docker build . -t node-healthcheck:latest
+      - name: Run docker image
+        run: docker run -d -p 11012:11012 -e NODE_URL=https://mainnet.vechain.org --name node-healthcheck node-healthcheck:latest
+      - name: Smoke test
+        run: |
+          IS_HEALTHY=$(curl -s http://localhost:11012/healthcheck | jq ".isHealthy")
+          if [ "$IS_HEALTHY" != "true" ]; then
+            echo "Smoke test failed"
+            exit 1
+          fi
