@@ -30,11 +30,7 @@ The API contains two endpoints:
     - [Installation](#installation)
     - [Configuration](#configuration)
     - [Usage](#usage)
-      - [Run locally](#run-locally)
-      - [Run in docker](#run-in-docker)
-      - [Monitor docker logs](#monitor-docker-logs)
       - [Release new docker image](#release-new-docker-image)
-    - [Documentation](#documentation)
     - [Contributing](#contributing)
     - [Roadmap](#roadmap)
     - [Changelog](#changelog)
@@ -52,7 +48,7 @@ You can run the application with node, or in a container using docker.
 
 ### Installation
 
-* For node installation, use `npm install`
+* For node installation, use `cd src && npm install`
 * For docker installation, use: `docker build . -t "node-healthcheck"`
 
 ### Configuration
@@ -65,7 +61,7 @@ You may override the default configuration by modifying the `.env` file:
 ### Usage
 
 * For node execution, use: `npm start`
-* For docker execution, use: `docker run -d --name "node-healthcheck" "node-healthcheck"`
+* For docker execution, use: `docker run -d --name "node-healthcheck" -p 11012:11012 -e NODE_URL=https://mainnet.vechain.org "node-healthcheck"`
 
 #### Release new docker image
 

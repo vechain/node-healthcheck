@@ -3,20 +3,20 @@ FROM --platform=linux/amd64 node:gallium-alpine3.18 AS builder-amd64
 
 WORKDIR /app
 # Copy the package.json and package-lock.json to the container
-COPY package*.json ./
+COPY ./src/package*.json ./
 RUN npm install
 # Copy the rest of the application code to the container
-COPY . .
+COPY ./src .
 
 # Build stage for arm64/v8 architecture
 FROM --platform=linux/arm64/v8 node:gallium-alpine3.18 AS builder-arm64
 
 WORKDIR /app
 # Copy the package.json and package-lock.json to the container
-COPY package*.json ./
+COPY ./src/package*.json ./
 RUN npm install
 # Copy the rest of the application code to the container
-COPY . .
+COPY ./src .
 
 # Production stage
 FROM node:gallium-alpine3.18
