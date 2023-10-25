@@ -2,9 +2,9 @@
 FROM --platform=linux/amd64 node:gallium-alpine3.18 AS builder-amd64
 
 WORKDIR /app
-# Copy the package.json
-COPY ./src/package.json .
-RUN npm install
+# Copy the package.json and package-lock.json to the container
+COPY ./src/package*.json .
+RUN npm ci
 # Copy the rest of the application code to the container
 COPY ./src .
 
@@ -12,9 +12,9 @@ COPY ./src .
 FROM --platform=linux/arm64/v8 node:gallium-alpine3.18 AS builder-arm64
 
 WORKDIR /app
-# Copy the package.json
-COPY ./src/package.json .
-RUN npm install
+# Copy the package.json and package-lock.json to the container
+COPY ./src/package*.json .
+RUN npm ci
 # Copy the rest of the application code to the container
 COPY ./src .
 
