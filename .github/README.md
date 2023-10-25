@@ -1,16 +1,22 @@
-# Project Title
+# Node Healthcheck
 
-![Your Project Logo](link-to-logo-image)
+![Node Hosting Project Logo](node-hosting.png)
 
 ## Introduction
 
-A brief description of your project, its purpose, and main features.
+This is a simple API that checks the health of a Vechain Node by comparing the timestamp of its latest block with the current time. If the timestamp is within an acceptable tolerance setting, it is considered healthy.
 
-This is a template repository, that allows you to quickly create new repos with the following templates:
-1. [README.md](/README.md)
-2. [CONTRIBUTING.md](/CONTRIBUTING.md)
-3. [CODE_OF_CONDUCT.md](/CODE_OF_CONDUCT.md)
-4. [LICENSE.md](/LICENSE.md)
+The main purpose of this tool is to be used in load balancers and availability monitors, to determine whether a node is not only online, but also fully synchronized with the blockchain.
+
+The API contains two endpoints:
+
+- /healthcheck
+
+  used by ALB to determine whether the node is online
+
+- /metrics
+
+  used by Prometheus to collect metrics about last block timestamp, number of seconds since last block and node healtchcheck status.
 
 Consider turning on branch protection for `main` as follows:
 1. Require a pull request before merging.
@@ -25,7 +31,7 @@ Consider turning on branch protection for `main` as follows:
 
 ## Table of Contents
 
-- [Project Title](#project-title)
+- [Node Healthcheck](#node-healthcheck)
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
@@ -33,6 +39,10 @@ Consider turning on branch protection for `main` as follows:
     - [Installation](#installation)
     - [Configuration](#configuration)
     - [Usage](#usage)
+      - [Run locally](#run-locally)
+      - [Run in docker](#run-in-docker)
+      - [Monitor docker logs](#monitor-docker-logs)
+      - [Release new docker image](#release-new-docker-image)
     - [Documentation](#documentation)
     - [Contributing](#contributing)
     - [Roadmap](#roadmap)
@@ -60,7 +70,38 @@ Explain how to configure the project, if necessary.
 
 ### Usage
 
-Include code examples or usage instructions to help users get started quickly.
+#### Run locally
+
+```bash
+npm install && npm start
+```
+
+#### Run in docker
+
+```bash
+npm run docker
+```
+
+#### Monitor docker logs
+
+```bash
+docker logs -f node-healthcheck
+```
+
+#### Release new docker image
+
+If you haven't done so already, enable multi-architecture builds on your system:
+> 1. Enable Docker BuildKit for multi-architecture builds by setting the environment variable in your shell profile
+> `export DOCKER_BUILDKIT=1`
+> 2. Create Docker BuildKit builder on your system
+> `docker buildx create --use`
+
+Run the following commands to build and push the image to ECR:
+```bash
+docker login -u <your_username>
+docker buildx build --platform linux/amd64,linux/arm64/v8 -t public.ecr.aws/vechainfoundation/node-healthcheck:<version> --push .
+docker buildx build --platform linux/amd64,linux/arm64/v8 -t public.ecr.aws/vechainfoundation/node-healthcheck:latest --push .
+```
 
 ### Documentation
 
