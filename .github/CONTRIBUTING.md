@@ -23,7 +23,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 
 ### Reporting Bugs
 
-If you find a bug, please create a new issue in the [issue tracker](https://github.com/vechainfoundation/your_project_name/issues). When submitting a bug report, please include:
+If you find a bug, please create a new issue in the [issue tracker](https://github.com/vechainfoundation/node-healthcheck/issues). When submitting a bug report, please include:
 
 - A clear and descriptive title.
 - A detailed description of the issue, including the steps to reproduce the bug.
@@ -32,7 +32,7 @@ If you find a bug, please create a new issue in the [issue tracker](https://gith
 
 ### Suggesting Enhancements
 
-If you have an idea for a new feature or improvement, please create a new issue in the [issue tracker](https://github.com/vechainfoundation/your_project_name/issues). When suggesting an enhancement, please include:
+If you have an idea for a new feature or improvement, please create a new issue in the [issue tracker](https://github.com/vechainfoundation/node-healthcheck/issues). When suggesting an enhancement, please include:
 
 - A clear and descriptive title.
 - A detailed description of the proposed feature, including examples of how it should work.
