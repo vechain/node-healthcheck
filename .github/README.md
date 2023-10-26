@@ -26,10 +26,12 @@ The API contains two endpoints:
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
     - [Configuration](#configuration)
-    - [Usage](#usage)
+      - [NODE\_URL](#node_url)
+      - [NODE\_HEALTHCHECK\_PORT](#node_healthcheck_port)
+      - [NODE\_HEALTHCHECK\_TOLERANCE\_IN\_SECONDS](#node_healthcheck_tolerance_in_seconds)
+    - [Using Node](#using-node)
+    - [Using Docker](#using-docker)
       - [Release new docker image](#release-new-docker-image)
     - [Contributing](#contributing)
     - [Roadmap](#roadmap)
@@ -39,29 +41,58 @@ The API contains two endpoints:
 
 ## Getting Started
 
-You can run the application with node, or in a container using docker.
-
-### Prerequisites
-
-* For node execution, you will need Node version `16.20.2`.
-* For docker execution, you will need Docker.
-
-### Installation
-
-* For node installation, use `cd src && npm install`
-* For docker installation, use: `docker build . -t "node-healthcheck"`
+You can run the application with [node version 16.20.2](https://nodejs.org/dist/v16.20.2/), or in a container using docker.
 
 ### Configuration
 
-You may override the default configuration by modifying the `.env` file:
-- NODE_URL: The URL of the node to be monitored by the healthcheck, defaults to `https://node-test.vechain.org`
-- NODE_HEALTHCHECK_PORT: The port of the healthcheck API, defaults to `11012`
-- NODE_HEALTHCHECK_TOLERANCE_IN_SECONDS: The amount of seconds before the healthcheck classifies the node as `unhealthy`, defaults to `15`
+You may override the default configuration by modifying the `.env` file.
 
-### Usage
+#### NODE_URL
 
-* For node execution, use: `npm start`
-* For docker execution, use: `docker run -d --name "node-healthcheck" -p 11012:11012 -e NODE_URL=https://mainnet.vechain.org "node-healthcheck"`
+The URL of the node to be monitored by the healthcheck. Defaults to `https://node-test.vechain.org`
+
+#### NODE_HEALTHCHECK_PORT
+
+The port of the healthcheck API. Defaults to `11012`
+
+#### NODE_HEALTHCHECK_TOLERANCE_IN_SECONDS
+
+The amount of seconds before the healthcheck classifies the node as `unhealthy`. Defaults to `15`
+
+### Using Node
+
+To install and run the application with node:
+
+```bash
+cd src
+npm ci
+npm start
+```
+
+### Using Docker
+
+To build and run the image with docker:
+
+```bash
+docker build . -t node-healthcheck:dev
+docker run -d \
+  --name node-hc \
+  -p 11012:11012 \
+  -e NODE_URL=https://mainnet.vechain.org \
+  node-healthcheck:dev
+```
+
+To download and run the image with docker:
+
+```bash
+docker run -d \
+  --name node-hc \
+  -p 11012:11012 \
+  -e NODE_URL=https://mainnet.vechain.org \
+  public.ecr.aws/vechainfoundation/node-healthcheck:latest
+```
+
+For more image tags, refer to our [Container Registry](https://gallery.ecr.aws/vechainfoundation/node-healthcheck).
 
 #### Release new docker image
 
