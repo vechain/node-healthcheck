@@ -41,7 +41,7 @@ The API contains two endpoints:
 
 ## Getting Started
 
-You can run the application with [node version 16.20.2](https://nodejs.org/dist/v16.20.2/), or in a container using docker.
+You can run the application with node, or in a container using docker.
 
 ### Configuration
 
@@ -61,7 +61,7 @@ The amount of seconds before the healthcheck classifies the node as `unhealthy`.
 
 ### Using Node
 
-To install and run the application with node:
+To install and run the application with [node version 16.20.2](https://nodejs.org/dist/v16.20.2/), run the following commands in the root directory of the project:
 
 ```bash
 cd src
@@ -71,7 +71,7 @@ npm start
 
 ### Using Docker
 
-To build and run the image with docker:
+To build and run the image with docker, run the following commands in the root directory of the project:
 
 ```bash
 docker build . -t node-healthcheck:dev

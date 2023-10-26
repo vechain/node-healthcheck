@@ -6,10 +6,6 @@
         "prom-client": "^14.2.0"
     },
     "scripts": {
-        "start": "node index.js",
-        "docker": "npm run docker:clean && npm run docker:build && npm run docker:run",
-        "docker:clean": "docker rm node-healthcheck -f 2> /dev/null",
-        "docker:build": "docker build . -t node-healthcheck:latest",
-        "docker:run": "docker run -d -p 11012:11012 -e NODE_URL=https://mainnet.vechain.org --name node-healthcheck node-healthcheck:latest"
+        "start": "node index.js"
     }
 }
