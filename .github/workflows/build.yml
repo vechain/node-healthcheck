@@ -36,14 +36,17 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Build docker image
-        run: ./scripts/build.sh
+        run: ./build.sh
       - name: Run docker image
-        run: ./scripts/run.sh
+        run: ./run.sh
       - name: Smoke test
-        run: ./scripts/test.sh
+        run: ./test.sh
