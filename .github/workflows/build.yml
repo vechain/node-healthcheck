@@ -51,7 +51,8 @@ jobs:
         run: docker run -d -p 11012:11012 -e NODE_URL=https://mainnet.vechain.org --name node-healthcheck node-healthcheck:latest
       - name: Smoke test
         run: |
-          IS_HEALTHY=$(curl -s http://localhost:11012/healthcheck | jq ".isHealthy")
+          RESPONSE=$(curl -s http://localhost:11012/healthcheck)
+          IS_HEALTHY=$(echo $RESPONSE | jq ".isHealthy")
           if [ "$IS_HEALTHY" != "true" ]; then
             echo "Smoke test failed"
             exit 1

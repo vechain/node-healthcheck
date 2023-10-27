@@ -1,9 +1,9 @@
 #!/bin/bash
-set -ex
+set -e
 
 if [ -z "$1" ]; then
-  echo "Please provide the tag for the new build."
-  exit 1
+    echo "Please provide the tag for the new build."
+    exit 1
 fi
 tag=$1
 
