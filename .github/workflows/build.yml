@@ -17,7 +17,7 @@ jobs:
       - uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE}}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
   sonarcloud:
     name: SonarCloud
@@ -46,14 +46,8 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Build docker image
-        run: docker build . -t node-healthcheck:latest
+        run: ./scripts/build.sh
       - name: Run docker image
-        run: docker run -d -p 11012:11012 -e NODE_URL=https://mainnet.vechain.org --name node-healthcheck node-healthcheck:latest
+        run: ./scripts/run.sh
       - name: Smoke test
-        run: |
-          RESPONSE=$(curl -s http://localhost:11012/healthcheck)
-          IS_HEALTHY=$(echo $RESPONSE | jq ".isHealthy")
-          if [ "$IS_HEALTHY" != "true" ]; then
-            echo "Smoke test failed"
-            exit 1
-          fi
+        run: ./scripts/test.sh
