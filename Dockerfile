@@ -19,7 +19,7 @@ RUN npm ci --ignore-scripts
 COPY ./src .
 
 # Production stage
-FROM node:gallium-alpine3.18 as runtime
+FROM node:gallium-alpine3.18 AS runtime
 
 RUN addgroup -S nonroot && adduser -S nonroot -G nonroot
 WORKDIR /app
