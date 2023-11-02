@@ -33,11 +33,11 @@ The API contains two endpoints:
     - [Using Node](#using-node)
     - [Using Docker](#using-docker)
       - [Release new docker image](#release-new-docker-image)
-    - [Contributing](#contributing)
-    - [Roadmap](#roadmap)
-    - [Changelog](#changelog)
-    - [License](#license)
-    - [Credits](#credits)
+  - [Contributing](#contributing)
+  - [Roadmap](#roadmap)
+  - [Changelog](#changelog)
+  - [License](#license)
+  - [Credits](#credits)
 
 ## Getting Started
 
@@ -104,26 +104,26 @@ To release a new version of the exporter, follow these steps:
 3. Run `./release.sh <version>` to build and push the image to ECR, where `<version>` is the tag for the new image.
 4. Verify that the new release was correctly pushed to [the docker repository](https://gallery.ecr.aws/vechainfoundation/node-healthcheck).
 
-### Contributing
+## Contributing
 
 If you want to contribute to this project and make it better, your help is very welcome. Contributing is also a great way to learn more about social coding on Github, new technologies and and their ecosystems and how to make constructive, helpful bug reports, feature requests and the noblest of all contributions: a good, clean pull request.
 
 For more details and guidelines on how to contribute, refer to [CONTRIBUTING](CONTRIBUTING.md).
 
-### Roadmap
+## Roadmap
 
 We are planning to add more features to this application going forward. More details to follow and suggestions are always welcome in the form of [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue).
 
-### Changelog
+## Changelog
 
 - v1 [31-Mar-2023] Add prometheus metrics for node health
 - v0 [08-Feb-2023] Implement a basic healthcheck API for nodes, based on block timestamps
 
-### License
+## License
 
 This project is licensed under [the MIT license](LICENSE.md).
 
-### Credits
+## Credits
 
 Special recognition to the main contributors:
 - @fabiorigam
