@@ -6,5 +6,4 @@ cd $scripts_path
 ./clean.sh
 ./build.sh
 ./run.sh
-sleep 1
 ./test.sh

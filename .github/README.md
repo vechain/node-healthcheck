@@ -18,7 +18,7 @@ The API contains two endpoints:
 
   used by Prometheus to collect health metrics, such as the last block timestamp, number of seconds since last block and node health status.
 
-![Node Hosting Design Diagram - Healthcheck](images/architecture-diagram-healthcheck.webp)
+![Node Hosting Design Diagram - Healthcheck](images/architecture-diagram-healthcheck.png)
 
 ## Table of Contents
 
@@ -33,11 +33,12 @@ The API contains two endpoints:
     - [Using Node](#using-node)
     - [Using Docker](#using-docker)
       - [Release new docker image](#release-new-docker-image)
-    - [Contributing](#contributing)
-    - [Roadmap](#roadmap)
-    - [Changelog](#changelog)
-    - [License](#license)
-    - [Credits](#credits)
+  - [Contributing](#contributing)
+  - [Roadmap](#roadmap)
+  - [Changelog](#changelog)
+  - [License](#license)
+  - [Contact Information](#contact-information)
+  - [Credits](#credits)
 
 ## Getting Started
 
@@ -71,19 +72,19 @@ npm start
 
 ### Using Docker
 
-To build and run the image with docker, run the following commands in the root directory of the project:
-
+The following bash scripts are available to help you build, run and test the app locally with docker:
 ```bash
-docker build . -t node-healthcheck:dev
-docker run -d \
-  --name node-hc \
-  -p 11012:11012 \
-  -e NODE_URL=https://mainnet.vechain.org \
-  node-healthcheck:dev
+cd scripts
+./clean.sh
+./build.sh
+./run.sh
+./test.sh
+
+# or simply
+./all.sh
 ```
 
-To download and run the image with docker:
-
+To download and run the image with docker without building it:
 ```bash
 docker run -d \
   --name node-hc \
@@ -104,26 +105,34 @@ To release a new version of the exporter, follow these steps:
 3. Run `./release.sh <version>` to build and push the image to ECR, where `<version>` is the tag for the new image.
 4. Verify that the new release was correctly pushed to [the docker repository](https://gallery.ecr.aws/vechainfoundation/node-healthcheck).
 
-### Contributing
+## Contributing
 
 If you want to contribute to this project and make it better, your help is very welcome. Contributing is also a great way to learn more about social coding on Github, new technologies and and their ecosystems and how to make constructive, helpful bug reports, feature requests and the noblest of all contributions: a good, clean pull request.
 
 For more details and guidelines on how to contribute, refer to [CONTRIBUTING](CONTRIBUTING.md).
 
-### Roadmap
+## Roadmap
 
 We are planning to add more features to this application going forward. More details to follow and suggestions are always welcome in the form of [GitHub issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue).
 
-### Changelog
+## Changelog
 
 - v1 [31-Mar-2023] Add prometheus metrics for node health
 - v0 [08-Feb-2023] Implement a basic healthcheck API for nodes, based on block timestamps
 
-### License
+## License
 
 This project is licensed under [the MIT license](LICENSE.md).
 
-### Credits
+## Contact Information
+
+* Project maintainer Kostas Apostolopoulos ([@kgapos](https://github.com/kgapos)) - kostas.apostolopoulos@vechain.org
+* Project maintainer Rishi Pal ([@rishikeshpal](https://github.com/rishikeshpal)) - rishi.pal@vechain.org
+* Main contributor Fabio Rigamonti ([@fabiorigam](https://github.com/fabiorigam)) - fabio.rigamonti@vechain.org
+* Discord https://discord.com/invite/vechain #support
+* Support https://support.vechain.org
+
+## Credits
 
 Special recognition to the main contributors:
-- @fabiorigam
+- [Fabio Rigamonti (@fabiorigam)](https://github.com/fabiorigam)
