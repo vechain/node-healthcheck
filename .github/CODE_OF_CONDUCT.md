@@ -39,24 +39,16 @@ If a community member engages in unacceptable behavior, the community organizers
 
 ## 5. Reporting Guidelines
 
-If you are subject to or witness unacceptable behavior, or have any other concerns, please [contact us](#8-contact-information) as soon as possible.
+If you are subject to or witness unacceptable behavior, or have any other concerns, please [contact us](README.md/#contact-information) as soon as possible.
 
 ## 6. Addressing Grievances
 
-If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should [contact us](#8-contact-information) with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.
+If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should [contact us](README.md/#contact-information) with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.
 
 ## 7. Scope
 
 We expect all community participants (contributors, paid or otherwise; sponsors; and other guests) to abide by this Code of Conduct in all community venues--online and in-person--as well as in all one-on-one communications pertaining to community business.
 
-## 8. Contact Information
-
-* Project maintainer kostas.apostolopoulos@vechain.org
-* Project maintainer rishi.pal@vechain.org
-* Main contributor fabio.rigamonti@vechain.org
-* Discord https://discord.com/invite/vechain #support
-* Support https://support.vechain.org
-
-## 9. License and Attribution
+## 8. License and Attribution
 
 This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct/.

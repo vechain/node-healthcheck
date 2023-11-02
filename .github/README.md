@@ -37,6 +37,7 @@ The API contains two endpoints:
   - [Roadmap](#roadmap)
   - [Changelog](#changelog)
   - [License](#license)
+  - [Contact Information](#contact-information)
   - [Credits](#credits)
 
 ## Getting Started
@@ -123,7 +124,15 @@ We are planning to add more features to this application going forward. More det
 
 This project is licensed under [the MIT license](LICENSE.md).
 
+## Contact Information
+
+* Project maintainer Kostas Apostolopoulos ([@kgapos](https://github.com/kgapos)) - kostas.apostolopoulos@vechain.org
+* Project maintainer Rishi Pal ([@rishikeshpal](https://github.com/rishikeshpal)) - rishi.pal@vechain.org
+* Main contributor Fabio Rigamonti ([@fabiorigam](https://github.com/fabiorigam)) - fabio.rigamonti@vechain.org
+* Discord https://discord.com/invite/vechain #support
+* Support https://support.vechain.org
+
 ## Credits
 
 Special recognition to the main contributors:
-- @fabiorigam
+- [Fabio Rigamonti (@fabiorigam)](https://github.com/fabiorigam)
