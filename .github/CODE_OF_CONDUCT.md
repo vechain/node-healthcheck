@@ -1,10 +1,10 @@
-# [Project Name] Code of Conduct
+Node Healthcheck Code of Conduct
 
 ## 1. Introduction
 
-The [Project Name] community is dedicated to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, religion, or technical experience. This Code of Conduct outlines our expectations for all members of the [Project Name] community, as well as the consequences for unacceptable behavior.
+The Node Healthcheck community is dedicated to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, religion, or technical experience. This Code of Conduct outlines our expectations for all members of the Node Healthcheck community, as well as the consequences for unacceptable behavior.
 
-We invite all those who participate in [Project Name] to help us create a safe and positive environment for everyone.
+We invite all those who participate in Node Healthcheck to help us create a safe and positive environment for everyone.
 
 ## 2. Expected Behavior
 
@@ -39,13 +39,11 @@ If a community member engages in unacceptable behavior, the community organizers
 
 ## 5. Reporting Guidelines
 
-If you are subject to or witness unacceptable behavior, or have any other concerns, please notify a community organizer as soon as possible. You can contact the project maintainer at [email@example.com].
-
-Additionally, community organizers are available to help community members engage with local law enforcement or to otherwise help those experiencing unacceptable behavior feel safe. In the context of in-person events, organizers will also provide escorts as desired by the person experiencing distress.
+If you are subject to or witness unacceptable behavior, or have any other concerns, please [contact us](#8-contact-information) as soon as possible.
 
 ## 6. Addressing Grievances
 
-If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify the project maintainer with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.
+If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should [contact us](#8-contact-information) with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.
 
 ## 7. Scope
 
@@ -53,7 +51,11 @@ We expect all community participants (contributors, paid or otherwise; sponsors;
 
 ## 8. Contact Information
 
-You can contact the project maintainer at [email@example.com].
+* Project maintainer kostas.apostolopoulos@vechain.org
+* Project maintainer rishi.pal@vechain.org
+* Main contributor fabio.rigamonti@vechain.org
+* Discord https://discord.com/invite/vechain #support
+* Support https://support.vechain.org
 
 ## 9. License and Attribution
 
