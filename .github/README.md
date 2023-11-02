@@ -18,7 +18,7 @@ The API contains two endpoints:
 
   used by Prometheus to collect health metrics, such as the last block timestamp, number of seconds since last block and node health status.
 
-![Node Hosting Design Diagram - Healthcheck](images/architecture-diagram-healthcheck.webp)
+![Node Hosting Design Diagram - Healthcheck](images/architecture-diagram-healthcheck.png)
 
 ## Table of Contents
 
