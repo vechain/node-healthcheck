@@ -71,19 +71,19 @@ npm start
 
 ### Using Docker
 
-To build and run the image with docker, run the following commands in the root directory of the project:
-
+The following bash scripts are available to help you build, run and test the app locally with docker:
 ```bash
-docker build . -t node-healthcheck:dev
-docker run -d \
-  --name node-hc \
-  -p 11012:11012 \
-  -e NODE_URL=https://mainnet.vechain.org \
-  node-healthcheck:dev
+cd scripts
+./clean.sh
+./build.sh
+./run.sh
+./test.sh
+
+# or simply
+./all.sh
 ```
 
-To download and run the image with docker:
-
+To download and run the image with docker without building it:
 ```bash
 docker run -d \
   --name node-hc \
