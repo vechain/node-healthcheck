@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is a simple API that checks the health of a Vechain Node by comparing the timestamp of its latest block with the current time. If the timestamp is within an acceptable tolerance setting, it is considered healthy.
+This is a simple API that checks the health of a vechain node by comparing the timestamp of its latest block with the current time. If the timestamp is within an acceptable tolerance setting, it is considered healthy.
 
 The main purpose of this tool is to be used in load balancers and availability monitors, to determine whether a node is not only online, but also fully synchronized with the blockchain. Moreover, it provides a `metrics` endpoint that is compatible with [prometheus](https://github.com/prometheus/prometheus) and exposes node health information to it. 
 
