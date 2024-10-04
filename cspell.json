@@ -8,7 +8,9 @@
         "buildx",
         "gitleaks",
         "healtchcheck",
+        "nodeops",
         "sonarcloud",
+        "vechain",
         "vechainfoundation"
     ],
     "ignoreWords": [],
